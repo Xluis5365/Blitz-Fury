@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c74onrr2jjmk1"
+path="res://.godot/imported/Wood.obj-7e226a58e8f382450a8b9b3df56bb01a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood.obj-7e226a58e8f382450a8b9b3df56bb01a.mesh"]
+
+source_file="res://Blitz-Fury/Wood.obj"
+dest_files=["res://.godot/imported/Wood.obj-7e226a58e8f382450a8b9b3df56bb01a.mesh", "res://.godot/imported/Wood.obj-7e226a58e8f382450a8b9b3df56bb01a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
