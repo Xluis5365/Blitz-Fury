@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd2j2ot86mdtg"
-path.s3tc="res://.godot/imported/Wood.png-26bf2be025787d6295ebeca58cb38645.s3tc.ctex"
+uid="uid://ey7rmk75daad"
+path.s3tc="res://.godot/imported/Blaster_WithScope_0.png-18171fca711491df4a2d6fef85d0f6b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Blitz-Fury/Wood.png"
-dest_files=["res://.godot/imported/Wood.png-26bf2be025787d6295ebeca58cb38645.s3tc.ctex"]
+source_file="res://Models/Protypes/Blaster_WithScope_0.png"
+dest_files=["res://.godot/imported/Blaster_WithScope_0.png-18171fca711491df4a2d6fef85d0f6b7.s3tc.ctex"]
 
 [params]
 
