@@ -2,3 +2,5 @@ res://Scenes/test_main.tscn
 res://Assets/Materials/Black_Texture.tres
 res://Models/Protypes/Model_scnenes/blaster_with_scope.tscn
 res://Scenes/Player/player.tscn
+res://Scenes/Player.gd
+res://Models/Protypes/Model_scnenes/blasterwithscope.tscn

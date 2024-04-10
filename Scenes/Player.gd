@@ -7,9 +7,14 @@ extends CharacterBody3D
 @onready var camera_3d: Camera3D = $neck/head/eyes/Camera3D
 @onready var eyes: Node3D = $neck/head/eyes
 
+@onready var standing_mesh: MeshInstance3D = $Standing_Mesh
+@onready var crouched_mesh: MeshInstance3D = $Crouched_Mesh
+
 @onready var standing_collision_shape: CollisionShape3D = $Standing_Collision_Shape
 @onready var crouched_collision_shape: CollisionShape3D = $Crouched_Collision_Shape
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
+
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 # Speed Vars
 
@@ -66,6 +71,9 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if event is InputEventMouseMotion:
 		if free_looking:
 			neck.rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
@@ -79,6 +87,8 @@ func _physics_process(delta: float) -> void:
 	# Setting movement input
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
+	
+	
 	#Handle Movement state
 	
 	#Crouching
@@ -87,6 +97,8 @@ func _physics_process(delta: float) -> void:
 		head.position.y = lerp(head.position.y,crouching_depth, delta * lerp_speed)
 		standing_collision_shape.disabled = true
 		crouched_collision_shape.disabled = false
+		standing_mesh.visible = false
+		crouched_mesh.visible = true
 		
 		# Slide begin logic
 		if sprinting && input_dir != Vector2.ZERO:
@@ -105,6 +117,8 @@ func _physics_process(delta: float) -> void:
 	elif !ray_cast_3d.is_colliding():
 		standing_collision_shape.disabled = false
 		crouched_collision_shape.disabled = true
+		standing_mesh.visible = true
+		crouched_mesh.visible = false
 		head.position.y = lerp(head.position.y,0.0, delta * lerp_speed)
 		
 		if Input.is_action_pressed("sprint"):
@@ -171,6 +185,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		sliding = false
+	
+	# Handle Idle animations
+	if input_dir == Vector2.ZERO and is_on_floor():
+		anim_player.play("blaster_withscope_idle")
+	else:
+		anim_player.play("RESET")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

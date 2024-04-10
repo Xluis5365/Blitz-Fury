@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bx7gae8rg1nse"
-path="res://.godot/imported/Blaster_WithScope.glb-5fc93f24fea1a30e1128b18232c049aa.scn"
+uid="uid://codm3wr1xvips"
+path="res://.godot/imported/MachineGun.glb-f9aafca00199aea389a9b4ecae87ec14.scn"
 
 [deps]
 
-source_file="res://Models/Protypes/Blaster_WithScope.glb"
-dest_files=["res://.godot/imported/Blaster_WithScope.glb-5fc93f24fea1a30e1128b18232c049aa.scn"]
+source_file="res://Models/Protypes/MachineGun.glb"
+dest_files=["res://.godot/imported/MachineGun.glb-f9aafca00199aea389a9b4ecae87ec14.scn"]
 
 [params]
 

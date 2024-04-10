@@ -1,16 +1,122 @@
-[gd_scene load_steps=5 format=3 uid="uid://dysr4vh5uqf4k"]
+[gd_scene load_steps=11 format=3 uid="uid://dysr4vh5uqf4k"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_4pe3u"]
-[ext_resource type="PackedScene" uid="uid://ln8bd5ulkqo1" path="res://Models/Protypes/Model_scnenes/blaster_with_scope.tscn" id="2_d0t7s"]
+[ext_resource type="PackedScene" uid="uid://buhru3ptjxqnh" path="res://Models/Protypes/Model_scnenes/blasterwithscope.tscn" id="3_851iq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6itpo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nsunx"]
+height = 1.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4ofs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oote2"]
 height = 1.3
 
+[sub_resource type="Animation" id="Animation_utjk1"]
+resource_name = "blaster_withscope_idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.568254)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(6.20038e-09, -1.5708, 0.144339)]
+}
+
+[sub_resource type="Animation" id="Animation_xcd2n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_re2f0"]
+resource_name = "blaster_withscope_shoot"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(-5.27407e-09, -1.5708, -0.120951), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_13sqd"]
+_data = {
+"RESET": SubResource("Animation_xcd2n"),
+"blaster_withscope_idle": SubResource("Animation_utjk1"),
+"blaster_withscope_shoot": SubResource("Animation_re2f0")
+}
+
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_4pe3u")
+
+[node name="Standing_Mesh" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_6itpo")
+
+[node name="Crouched_Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.250463, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_nsunx")
 
 [node name="Standing_Collision_Shape" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_v4ofs")
@@ -33,7 +139,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.517, 0)
 
 [node name="Camera3D" type="Camera3D" parent="neck/head/eyes"]
 
-[node name="hands" type="Node3D" parent="neck/head"]
+[node name="WeaponManager" type="Node3D" parent="neck/head"]
 
-[node name="Blaster_WithScope" parent="neck/head/hands" instance=ExtResource("2_d0t7s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.278251, -0.517, -0.819868)
+[node name="FPS_Rig" type="Node3D" parent="neck/head/WeaponManager"]
+
+[node name="BlasterWithScope" parent="neck/head/WeaponManager/FPS_Rig" instance=ExtResource("3_851iq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.278251, -0.517, -0.512637)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_13sqd")
+}
+playback_default_blend_time = 0.05

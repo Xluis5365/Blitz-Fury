@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv63ks7vcv0uq"
-path.s3tc="res://.godot/imported/Blaster_WithScope_1.png-6cad7e46dcb63d6aef3981d64de89585.s3tc.ctex"
+uid="uid://bghhrf3oy5s73"
+path.s3tc="res://.godot/imported/MachineGun_0.png-13f92924157a7c379180f76d8630b4aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Models/Protypes/Blaster_WithScope_1.png"
-dest_files=["res://.godot/imported/Blaster_WithScope_1.png-6cad7e46dcb63d6aef3981d64de89585.s3tc.ctex"]
+source_file="res://Models/Protypes/MachineGun_0.png"
+dest_files=["res://.godot/imported/MachineGun_0.png-13f92924157a7c379180f76d8630b4aa.s3tc.ctex"]
 
 [params]
 
