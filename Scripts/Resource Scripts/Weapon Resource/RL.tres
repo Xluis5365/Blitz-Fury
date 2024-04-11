@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://bx4u5hc4i11qh"]
+
+[ext_resource type="PackedScene" uid="uid://cvs746tk2q57y" path="res://Models/Protypes/Model_scnenes/Rocket_Model.tscn" id="1_klyyh"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon_resource.gd" id="1_s5a3j"]
+
+[resource]
+script = ExtResource("1_s5a3j")
+Weapon_Name = "Rocket Launcher"
+Activate_Anim = "RL Activate"
+Deactivate_Anim = "RL Deactivate"
+Shoot_Anim = "RL Shoot"
+Reload_Anim = "RL Reload"
+Out_of_Ammo = "RL OOA"
+Current_Ammo = 10
+Reserve_Ammo = 40
+Magazine = 15
+Max_Ammo = 50
+Infinite_Ammo = false
+Damage = 100
+Pick_Up_Ammo = 10
+Type = 2
+Projectile_To_Load = ExtResource("1_klyyh")
+Weapon_Range = 2000
+Projectile_Velocity = 70

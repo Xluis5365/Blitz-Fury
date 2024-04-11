@@ -1,16 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712795264
+::res://::1712810037
 icon.svg::CompressedTexture2D::3692892744339962346::1712594702::1712594716::1::::<><>::
 README.md::TextFile::-1::1712704123::0::1::::<><>::
-::res://Assets/::1712602849
-::res://Assets/Materials/::1712795082
+::res://Assets/::1712810037
+crosshair046.png::CompressedTexture2D::7231281832437682::1712807803::1712807852::1::::<><>::
+crosshairs (1) (1).png::CompressedTexture2D::6677490452120037993::1712805438::1712805438::1::::<><>::
+::res://Assets/GAP_EasyExplosions_Textures/::1712810038
+Circle03.png::CompressedTexture2D::2092294557795745408::1712810031::1712810038::1::::<><>::
+Flare00.PNG::CompressedTexture2D::5020001924434408835::1712810031::1712810130::1::::<><>::
+Flare01.png::CompressedTexture2D::5080010825836784596::1712810031::1712810038::1::::<><>::
+::res://Assets/Materials/::1712807811
 Black_Texture.tres::StandardMaterial3D::2425992326671143656::1712795082::0::1::::<><>::uid://bt44d1fuhjb42::::res://Assets/Materials/texture_13.png
 p_texture_01.png::CompressedTexture2D::7876513722449761666::1712602986::1712602989::1::::<><>::
 texture_01.png::CompressedTexture2D::5307823130446781776::1712602956::1712602956::1::::<><>::
 texture_02.png::CompressedTexture2D::2425123948971461453::1712602887::1712602887::1::::<><>::
 texture_13.png::CompressedTexture2D::3781643192104936561::1712602912::1712611043::1::::<><>::
+::res://Assets/mortar_ammo/::1712808490
+license.txt::TextFile::-1::1712808483::0::1::::<><>::
+scene.gltf::PackedScene::1060678834743209729::1712808483::1712808490::1::::<><>::uid://1ghkd8pg3clo::::res://Assets/mortar_ammo/textures/Material.002_normal.png<>uid://cjpcjy64ey68l::::res://Assets/mortar_ammo/textures/Material.002_occlusion.png
+::res://Assets/mortar_ammo/textures/::1712808489
+Material.002_diffuse.png::CompressedTexture2D::1866441957582334184::1712808483::1712808489::1::::<><>::
+Material.002_normal.png::CompressedTexture2D::1837739287240863596::1712808483::1712808489::1::::<><>::
+Material.002_occlusion.png::CompressedTexture2D::5435645442343360457::1712808483::1712808489::1::::<><>::
+Material.002_specularGlossiness.png::CompressedTexture2D::3996299377811401421::1712808483::1712808489::1::::<><>::
 ::res://Models/::1712708086
-::res://Models/Protypes/::1712713144
+::res://Models/Protypes/::1712802556
 BlasterWithScope.glb::PackedScene::172172177340129777::1712711013::1712711016::1::::<><>::uid://dqowuph0bip54::::res://Models/Protypes/BlasterWithScope_0.png<>uid://b822dfbjnmy48::::res://Models/Protypes/BlasterWithScope_1.png<>uid://cv76h2a1km4wq::::res://Models/Protypes/BlasterWithScope_2.png
 BlasterWithScope_0.png::CompressedTexture2D::8312557127365056133::1712711015::1712711016::1::::<><>::
 BlasterWithScope_1.png::CompressedTexture2D::4760035703882539627::1712711016::1712711016::1::::<><>::
@@ -18,19 +32,28 @@ BlasterWithScope_2.png::CompressedTexture2D::6314763318573533872::1712711016::17
 MachineGun.glb::PackedScene::5762458100711639624::1712713142::1712713144::1::::<><>::uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
 MachineGun_0.png::CompressedTexture2D::2822460073786105684::1712712776::1712712777::1::::<><>::
 MachineGun_1.png::CompressedTexture2D::3039944425918622461::1712712776::1712712777::1::::<><>::
-::res://Models/Protypes/Model_scnenes/::1712795533
-Blaster.tscn::PackedScene::3805717600189388265::1712795533::0::1::::<><>::uid://cpnwedonamsn::::res://Models/Protypes/BlasterWithScope.glb
+RL.glb::PackedScene::1926828557144495156::1712802548::1712802556::1::::<><>::
+::res://Models/Protypes/Model_scnenes/::1712809696
+Blaster.tscn::PackedScene::3805717600189388265::1712809695::0::1::::<><>::uid://cpnwedonamsn::::res://Models/Protypes/BlasterWithScope.glb
 blaster_with_scope.tscn::PackedScene::800919842214334646::1712710071::0::1::::<><>::uid://bx7gae8rg1nse::::res://Models/Protypes/Blaster_WithScope.glb
-machine_gun.tscn::PackedScene::7680800804371085504::1712795533::0::1::::<><>::uid://codm3wr1xvips::::res://Models/Protypes/MachineGun.glb<>uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
-::res://Scenes/::1712795533
-test_main.tscn::PackedScene::4275006140612227329::1712795533::0::1::::<><>::uid://batf0eqwwfe5u::::res://Assets/Materials/Black_Texture.tres<>uid://dysr4vh5uqf4k::::res://Scenes/Player/player.tscn
-::res://Scenes/Player/::1712795783
-player.tscn::PackedScene::8882038190059837240::1712795925::0::1::::<><>::res://Scripts/Player.gd<>res://Scenes/Player/WeaponManager.gd<>uid://dhovwxeqiuaxs::::res://Models/Protypes/Model_scnenes/machine_gun.tscn<>uid://ch4v1chbmeqd2::::res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres<>uid://buhru3ptjxqnh::::res://Models/Protypes/Model_scnenes/Blaster.tscn<>uid://3shs4uulqwrq::::res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres
-WeaponManager.gd::GDScript::-1::1712795783::0::1::::<>Node3D<>::
-::res://Scripts/::1712791538
-Player.gd::GDScript::-1::1712710711::0::1::::<>CharacterBody3D<>::
-::res://Scripts/Resource Scripts/::1712792529
-weapon_resource.gd::GDScript::-1::1712792529::0::1::::WeaponResource<>Resource<>::
-::res://Scripts/Resource Scripts/Weapon Resource/::1712795050
-Blaster.tres::Resource/Resource::2002905139674941658::1712794603::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd
-MachineGun.tres::Resource/Resource::5325351831131763841::1712795050::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd
+MachineGun.tscn::PackedScene::7680800804371085504::1712809695::0::1::::<><>::uid://codm3wr1xvips::::res://Models/Protypes/MachineGun.glb<>uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
+rl.tscn::PackedScene::6701113368536468253::1712809695::0::1::::<><>::uid://2pmt5b5ayqjc::::res://Models/Protypes/RL.glb
+Rocket_Model.gd::GDScript::-1::1712809025::0::1::::<>RigidBody3D<>::
+Rocket_Model.tscn::PackedScene::6285962273215965312::1712809696::0::1::::<><>::res://Models/Protypes/Model_scnenes/Rocket_Model.gd<>uid://cjpcjy64ey68l::::res://Assets/mortar_ammo/textures/Material.002_occlusion.png<>uid://1ghkd8pg3clo::::res://Assets/mortar_ammo/textures/Material.002_normal.png
+::res://Scenes/::1712809694
+test_main.tscn::PackedScene::4275006140612227329::1712809694::0::1::::<><>::uid://batf0eqwwfe5u::::res://Assets/Materials/Black_Texture.tres<>uid://dysr4vh5uqf4k::::res://Scenes/Player/player.tscn<>res://Scripts/Box.gd
+::res://Scenes/Player/::1712809708
+HUD.gd::GDScript::-1::1712803306::0::1::::<>CanvasLayer<>::
+player.tscn::PackedScene::8882038190059837240::1712809708::0::1::::<><>::res://Scripts/Player.gd<>res://Scenes/Player/WeaponManager.gd<>uid://c2evj6y1mys4h::::res://Assets/crosshairs (1) (1).png<>uid://ch4v1chbmeqd2::::res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres<>uid://buhru3ptjxqnh::::res://Models/Protypes/Model_scnenes/Blaster.tscn<>uid://3shs4uulqwrq::::res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres<>uid://dhovwxeqiuaxs::::res://Models/Protypes/Model_scnenes/MachineGun.tscn<>uid://bx4u5hc4i11qh::::res://Scripts/Resource Scripts/Weapon Resource/RL.tres<>res://Scenes/Player/HUD.gd<>uid://c2qcmgaesd0ht::::res://Models/Protypes/Model_scnenes/rl.tscn
+WeaponManager.gd::GDScript::-1::1712809692::0::1::::<>Node3D<>::
+::res://Scripts/::1712807686
+Box.gd::GDScript::-1::1712807686::0::1::::<>RigidBody3D<>::
+Player.gd::GDScript::-1::1712799123::0::1::::<>CharacterBody3D<>::
+::res://Scripts/Resource Scripts/::1712808235
+weapon_resource.gd::GDScript::-1::1712808235::0::1::::WeaponResource<>Resource<>::
+::res://Scripts/Resource Scripts/Weapon Resource/::1712810037
+Blaster.tres::Resource/WeaponResource::2002905139674941658::1712806543::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd
+bullet_debug.gd::GDScript::-1::1712807927::0::1::::<>Sprite3D<>::
+bullet_debug.tscn::PackedScene::3306323572618035438::1712809695::0::1::::<><>::uid://drdlp5ou8i5::::res://Assets/crosshair046.png<>res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.gd
+MachineGun.tres::Resource/WeaponResource::5325351831131763841::1712806515::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd
+RL.tres::Resource/WeaponResource::4061899327990485887::1712809669::0::1::::<><>::uid://cvs746tk2q57y::::res://Models/Protypes/Model_scnenes/Rocket_Model.tscn<>res://Scripts/Resource Scripts/weapon_resource.gd

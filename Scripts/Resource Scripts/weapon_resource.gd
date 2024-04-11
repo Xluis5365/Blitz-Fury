@@ -16,3 +16,7 @@ class_name WeaponResource
 @export var Infinite_Ammo : bool
 @export var Damage : int
 @export var Pick_Up_Ammo : int
+@export_flags("Hitscan", "Projectile") var Type
+@export var Projectile_To_Load : PackedScene
+@export var Weapon_Range : int
+@export var Projectile_Velocity: int

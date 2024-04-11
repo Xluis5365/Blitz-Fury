@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b153yx5kqj7ld"]
+[gd_scene load_steps=9 format=3 uid="uid://b153yx5kqj7ld"]
 
 [ext_resource type="Material" uid="uid://batf0eqwwfe5u" path="res://Assets/Materials/Black_Texture.tres" id="1_qabi7"]
 [ext_resource type="PackedScene" uid="uid://dysr4vh5uqf4k" path="res://Scenes/Player/player.tscn" id="2_cgstb"]
+[ext_resource type="Script" path="res://Scripts/Box.gd" id="3_q46bd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_16a2k"]
 sky_top_color = Color(0.396078, 0.47451, 0.823529, 1)
@@ -17,6 +18,11 @@ background_mode = 2
 sky = SubResource("Sky_fxn68")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gccx"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uypml"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [node name="World" type="Node3D"]
 
@@ -44,3 +50,15 @@ shadow_enabled = true
 environment = SubResource("Environment_fhnor")
 
 [node name="Player" parent="." instance=ExtResource("2_cgstb")]
+
+[node name="Box" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66491, 4.13105)
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("3_q46bd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box"]
+mesh = SubResource("BoxMesh_4gccx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box"]
+shape = SubResource("ConvexPolygonShape3D_uypml")

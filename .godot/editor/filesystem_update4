@@ -10,3 +10,12 @@ res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres
 res://Scripts/Player.gd
 res://Scripts/Resource Scripts/weapon_resource.gd
 res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres
+res://Scenes/Player/HUD.gd
+res://Models/Protypes/Model_scnenes/rl.tscn
+res://Scripts/Resource Scripts/Weapon Resource/RL.tres
+res://Scripts/Box.gd
+res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.gd
+res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.tscn
+res://Models/Protypes/Model_scnenes/Rocket_Model.tscn
+res://Models/Protypes/Model_scnenes/Rocket_Model.gd
+res://Models/Protypes/explosion.tscn

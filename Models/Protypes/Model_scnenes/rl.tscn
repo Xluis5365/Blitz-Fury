@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2qcmgaesd0ht"]
+
+[ext_resource type="PackedScene" uid="uid://2pmt5b5ayqjc" path="res://Models/Protypes/RL.glb" id="1_08p3e"]
+
+[node name="RL" instance=ExtResource("1_08p3e")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
