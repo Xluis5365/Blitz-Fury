@@ -728,7 +728,6 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_3680q"]
 resource_name = "RL Shoot"
-length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

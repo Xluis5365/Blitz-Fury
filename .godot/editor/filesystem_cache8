@@ -5,7 +5,8 @@ README.md::TextFile::-1::1712704123::0::1::::<><>::
 ::res://Assets/::1712810037
 crosshair046.png::CompressedTexture2D::7231281832437682::1712807803::1712807852::1::::<><>::
 crosshairs (1) (1).png::CompressedTexture2D::6677490452120037993::1712805438::1712805438::1::::<><>::
-::res://Assets/GAP_EasyExplosions_Textures/::1712810038
+FlareMattres.tres::StandardMaterial3D::5202746184344604496::1712811495::0::1::::<><>::uid://cdryx0gtj0t1l::::res://Assets/GAP_EasyExplosions_Textures/Flare00.PNG
+::res://Assets/GAP_EasyExplosions_Textures/::1712810130
 Circle03.png::CompressedTexture2D::2092294557795745408::1712810031::1712810038::1::::<><>::
 Flare00.PNG::CompressedTexture2D::5020001924434408835::1712810031::1712810130::1::::<><>::
 Flare01.png::CompressedTexture2D::5080010825836784596::1712810031::1712810038::1::::<><>::
@@ -24,7 +25,7 @@ Material.002_normal.png::CompressedTexture2D::1837739287240863596::1712808483::1
 Material.002_occlusion.png::CompressedTexture2D::5435645442343360457::1712808483::1712808489::1::::<><>::
 Material.002_specularGlossiness.png::CompressedTexture2D::3996299377811401421::1712808483::1712808489::1::::<><>::
 ::res://Models/::1712708086
-::res://Models/Protypes/::1712802556
+::res://Models/Protypes/::1712811059
 BlasterWithScope.glb::PackedScene::172172177340129777::1712711013::1712711016::1::::<><>::uid://dqowuph0bip54::::res://Models/Protypes/BlasterWithScope_0.png<>uid://b822dfbjnmy48::::res://Models/Protypes/BlasterWithScope_1.png<>uid://cv76h2a1km4wq::::res://Models/Protypes/BlasterWithScope_2.png
 BlasterWithScope_0.png::CompressedTexture2D::8312557127365056133::1712711015::1712711016::1::::<><>::
 BlasterWithScope_1.png::CompressedTexture2D::4760035703882539627::1712711016::1712711016::1::::<><>::
@@ -32,6 +33,7 @@ BlasterWithScope_2.png::CompressedTexture2D::6314763318573533872::1712711016::17
 MachineGun.glb::PackedScene::5762458100711639624::1712713142::1712713144::1::::<><>::uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
 MachineGun_0.png::CompressedTexture2D::2822460073786105684::1712712776::1712712777::1::::<><>::
 MachineGun_1.png::CompressedTexture2D::3039944425918622461::1712712776::1712712777::1::::<><>::
+explosion.tscn::PackedScene::8837508961778622182::1712811059::0::1::::<><>::uid://cdryx0gtj0t1l::::res://Assets/GAP_EasyExplosions_Textures/Flare00.PNG
 RL.glb::PackedScene::1926828557144495156::1712802548::1712802556::1::::<><>::
 ::res://Models/Protypes/Model_scnenes/::1712809696
 Blaster.tscn::PackedScene::3805717600189388265::1712809695::0::1::::<><>::uid://cpnwedonamsn::::res://Models/Protypes/BlasterWithScope.glb

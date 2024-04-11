@@ -1,7 +1,8 @@
+CollisionShape3D
+Area3D
 GPUParticles3D
 Node3D
 Timer
-CollisionShape3D
 RigidBody3D
 Sprite3D
 MeshInstance3D
@@ -11,4 +12,3 @@ HBoxContainer
 Label
 VBoxContainer
 CanvasLayer
-CollisionShape2D

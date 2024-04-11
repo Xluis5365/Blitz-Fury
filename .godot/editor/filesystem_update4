@@ -19,3 +19,4 @@ res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.tscn
 res://Models/Protypes/Model_scnenes/Rocket_Model.tscn
 res://Models/Protypes/Model_scnenes/Rocket_Model.gd
 res://Models/Protypes/explosion.tscn
+res://Models/Protypes/explosion.gd

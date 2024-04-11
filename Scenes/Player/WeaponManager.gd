@@ -9,6 +9,7 @@ signal Update_Weapon_Stack
 
 
 var Debug_Bullet = preload("res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.tscn")
+var Explosion = preload("res://Models/Protypes/explosion.tscn")
 
 var Current_Weapon : WeaponResource = null
 
@@ -161,10 +162,10 @@ func Launch_Projectile(Point: Vector3):
 	var Bullet_Collision = get_world_3d().direct_space_state.intersect_ray(New_Intersection)
 	
 	if Bullet_Collision:
-		var Hit_Indicator = Debug_Bullet.instantiate()
+		var Explosion = Explosion.instantiate()
 		var world = get_tree().get_root().get_child(0)
-		world.add_child(Hit_Indicator)
-		Hit_Indicator.global_translate(Bullet_Collision.position)
+		world.add_child(Explosion)
+		Explosion.global_translate(Bullet_Collision.position)
 		Hit_Scan_Damage(Bullet_Collision.collider)
 	
 	bullet_point.add_child(Projectile)
