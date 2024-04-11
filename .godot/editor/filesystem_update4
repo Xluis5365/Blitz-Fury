@@ -1,22 +1,14 @@
-res://Scenes/test_main.tscn
+res://Multiplayer/MultiplayerScene.tscn
 res://Assets/Materials/Black_Texture.tres
+res://Scripts/Resource Scripts/Weapon Resource/RL.tres
+res://Assets/Materials/Red_Texture.tres
+res://GameManager.gd
+res://MultiplayerController.gd
+res://Scenes/test_main.tscn
+res://SceneManager.gd
 res://Scenes/Player/player.tscn
-res://Models/Protypes/Model_scnenes/blasterwithscope.tscn
-res://Models/Protypes/Model_scnenes/machine_gun.tscn
-res://Scenes/Player/WeaponManager.gd
 res://Models/Protypes/Model_scnenes/Blaster.tscn
 res://Models/Protypes/Model_scnenes/MachineGun.tscn
-res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres
-res://Scripts/Player.gd
-res://Scripts/Resource Scripts/weapon_resource.gd
-res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres
-res://Scenes/Player/HUD.gd
-res://Models/Protypes/Model_scnenes/rl.tscn
-res://Scripts/Resource Scripts/Weapon Resource/RL.tres
-res://Scripts/Box.gd
-res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.gd
-res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.tscn
-res://Models/Protypes/Model_scnenes/Rocket_Model.tscn
-res://Models/Protypes/Model_scnenes/Rocket_Model.gd
 res://Models/Protypes/explosion.tscn
-res://Models/Protypes/explosion.gd
+res://Scripts/Player.gd
+res://Scenes/Player/WeaponManager.gd

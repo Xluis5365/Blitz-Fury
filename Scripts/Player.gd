@@ -75,10 +75,17 @@ const MAX_SPEED_AIR = 30.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(str(name).to_int())
+
 func _ready() -> void:
+	if not is_multiplayer_authority(): return
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if is_multiplayer_authority():
+		camera_3d.current = true
 
 func _input(event: InputEvent) -> void:
+	if not is_multiplayer_authority(): return
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -96,6 +103,7 @@ func _input(event: InputEvent) -> void:
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(80))
 
 func _physics_process(delta: float) -> void:
+	if not is_multiplayer_authority(): return
 	# Setting movement input
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
@@ -234,6 +242,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func accelerate(dir, delta, accel_type, max_velocity):
+	if not is_multiplayer_authority(): return
 	var proj_vel = velocity.dot(dir)
 	$CanvasLayer/VBoxContainer/HBoxContainer4/Proj_vel.text = str(proj_vel)
 	$CanvasLayer/VBoxContainer/HBoxContainer5/Actual_vel.text = str(velocity.length())

@@ -46,7 +46,7 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Shoot"):
-		shoot()
+		shoot.rpc()
 
 func initialize(_start_weapon : Array):
 	#Creating a dictionary to refer to our weapons
@@ -82,6 +82,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == Current_Weapon.Deactivate_Anim:
 		Change_Weapon(Next_Weapon)
 
+@rpc("call_local")
 func shoot():
 	if Current_Weapon.Current_Ammo != 0:
 		if !animation_player.is_playing(): # enforces the DPS by the animation lenght
@@ -151,7 +152,6 @@ func Hit_Scan_Collistion(Collision_Point):
 func Hit_Scan_Damage(Collider):
 	if Collider.is_in_group("Target") and  Collider.has_method("Hit_Successful"):
 		Collider.Hit_Successful(Current_Weapon.Damage)
-
 
 func Launch_Projectile(Point: Vector3):
 	var Direction = (Point - bullet_point.get_global_transform().origin).normalized()

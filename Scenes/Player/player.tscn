@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dysr4vh5uqf4k"]
+[gd_scene load_steps=34 format=3 uid="uid://dysr4vh5uqf4k"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_yrsvh"]
 [ext_resource type="Script" path="res://Scenes/Player/WeaponManager.gd" id="2_c782q"]
@@ -84,6 +84,97 @@ tracks/4/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_a4l2l"]
+resource_name = "Blaster Deactivate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -0.311035, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(-0.0692992, -0.659347, -0.0921164)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.259322, -0.314495, -0.979689), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qlwfs"]
+resource_name = "Blaster OOA"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.477371), Vector3(0.278251, -0.517, -0.512637)]
+}
+
 [sub_resource type="Animation" id="Animation_dsysr"]
 resource_name = "Blaster Reload"
 length = 1.5
@@ -110,6 +201,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(0.5, 0.5, 1, 2, 2),
 "update": 0,
 "values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.113181, -0.715036, -0.512637), Vector3(0.112736, -0.715036, -0.479788), Vector3(0.113181, -0.715036, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
+}
+
+[sub_resource type="Animation" id="Animation_re2f0"]
+resource_name = "Blaster Shoot"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(-5.27407e-09, -1.5708, -0.120951), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
 }
 
 [sub_resource type="Animation" id="Animation_sm5eb"]
@@ -174,6 +293,98 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hs1vo"]
+resource_name = "MachineGun Deactivate"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(-0.43705, -0.916805, 0.504526)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.271367, -0.517, -0.342622), Vector3(0.110728, -0.517, 0.0705371)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.271826, -0.299726, -1.49846), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wafxn"]
+resource_name = "MachineGun OOA"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.271367, -0.517, -0.342622), Vector3(0.271367, -0.517, -0.306193), Vector3(0.271367, -0.517, -0.342622)]
 }
 
 [sub_resource type="Animation" id="Animation_imcgh"]
@@ -415,189 +626,6 @@ tracks/12/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_utjk1"]
-resource_name = "blaster_withscope_idle"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.568254)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(6.20038e-09, -1.5708, 0.144339)]
-}
-
-[sub_resource type="Animation" id="Animation_a4l2l"]
-resource_name = "Blaster Deactivate"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(0, -0.311035, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(-0.0692992, -0.659347, -0.0921164)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.259322, -0.314495, -0.979689), Vector3(0, 0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_hs1vo"]
-resource_name = "MachineGun Deactivate"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(-0.43705, -0.916805, 0.504526)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.271367, -0.517, -0.342622), Vector3(0.110728, -0.517, 0.0705371)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.271826, -0.299726, -1.49846), Vector3(0, 0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_re2f0"]
-resource_name = "Blaster Shoot"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector3(-5.27407e-09, -1.5708, -0.120951), Vector3(0, -1.5708, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
-}
-
 [sub_resource type="Animation" id="Animation_1j4ny"]
 resource_name = "RL Activate"
 length = 0.5
@@ -726,31 +754,32 @@ tracks/4/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_3680q"]
-resource_name = "RL Shoot"
+[sub_resource type="Animation" id="Animation_a66dy"]
+resource_name = "RL OOA"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:position")
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(0.5, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.395113, -0.265901, -0.63674), Vector3(0.395113, -0.355924, -0.63674)]
+"values": [Vector3(6.55885e-07, -1.46491, 0.114075), Vector3(6.55885e-07, -1.46491, 0.114075), Vector3(6.55885e-07, -1.46491, 0.114075)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:rotation")
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(0.5, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.0344684, -1.47066, -0.216334), Vector3(6.55885e-07, -1.46491, 0.114075)]
+"values": [Vector3(0.395113, -0.355924, -0.63674), Vector3(0.395113, -0.355924, -0.59443), Vector3(0.395113, -0.355924, -0.63674)]
 }
 
 [sub_resource type="Animation" id="Animation_fm1mc"]
@@ -781,88 +810,59 @@ tracks/1/keys = {
 "values": [Vector3(0.395113, -0.355924, -0.63674), Vector3(0.122895, -0.555778, -0.509689), Vector3(0.195487, -0.502484, -0.543569), Vector3(0.122895, -0.555778, -0.509689), Vector3(0.395113, -0.355924, -0.63674)]
 }
 
-[sub_resource type="Animation" id="Animation_qlwfs"]
-resource_name = "Blaster OOA"
-length = 0.5
+[sub_resource type="Animation" id="Animation_3680q"]
+resource_name = "RL Shoot"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0.395113, -0.265901, -0.63674), Vector3(0.395113, -0.355924, -0.63674)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.477371), Vector3(0.278251, -0.517, -0.512637)]
+"values": [Vector3(0.0344684, -1.47066, -0.216334), Vector3(6.55885e-07, -1.46491, 0.114075)]
 }
 
-[sub_resource type="Animation" id="Animation_wafxn"]
-resource_name = "MachineGun OOA"
-length = 0.5
+[sub_resource type="Animation" id="Animation_utjk1"]
+resource_name = "blaster_withscope_idle"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
 "update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.568254)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
 "update": 0,
-"values": [Vector3(0.271367, -0.517, -0.342622), Vector3(0.271367, -0.517, -0.306193), Vector3(0.271367, -0.517, -0.342622)]
-}
-
-[sub_resource type="Animation" id="Animation_a66dy"]
-resource_name = "RL OOA"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(6.55885e-07, -1.46491, 0.114075), Vector3(6.55885e-07, -1.46491, 0.114075), Vector3(6.55885e-07, -1.46491, 0.114075)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.395113, -0.355924, -0.63674), Vector3(0.395113, -0.355924, -0.59443), Vector3(0.395113, -0.355924, -0.63674)]
+"values": [Vector3(0, -1.5708, 0), Vector3(6.20038e-09, -1.5708, 0.144339)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_13sqd"]
@@ -886,8 +886,87 @@ _data = {
 "blaster_withscope_idle": SubResource("Animation_utjk1")
 }
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_wkqbc"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("neck:rotation")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("neck/head:position")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("neck/head:rotation")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("Standing_Mesh:visible")
+properties/5/spawn = true
+properties/5/replication_mode = 2
+properties/6/path = NodePath("Crouched_Mesh:visible")
+properties/6/spawn = true
+properties/6/replication_mode = 2
+properties/7/path = NodePath("Standing_Collision_Shape:disabled")
+properties/7/spawn = true
+properties/7/replication_mode = 2
+properties/8/path = NodePath("Crouched_Collision_Shape:disabled")
+properties/8/spawn = true
+properties/8/replication_mode = 2
+properties/9/path = NodePath("neck/head/eyes:position")
+properties/9/spawn = true
+properties/9/replication_mode = 1
+properties/10/path = NodePath("neck/head/eyes/Camera3D:rotation")
+properties/10/spawn = true
+properties/10/replication_mode = 1
+properties/11/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:visible")
+properties/11/spawn = true
+properties/11/replication_mode = 1
+properties/12/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:visible")
+properties/12/spawn = true
+properties/12/replication_mode = 1
+properties/13/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:visible")
+properties/13/spawn = true
+properties/13/replication_mode = 1
+properties/14/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:position")
+properties/14/spawn = true
+properties/14/replication_mode = 1
+properties/15/path = NodePath("neck/head/WeaponManager/FPS_Rig/Blaster:rotation")
+properties/15/spawn = true
+properties/15/replication_mode = 1
+properties/16/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:position")
+properties/16/spawn = true
+properties/16/replication_mode = 1
+properties/17/path = NodePath("neck/head/WeaponManager/FPS_Rig/RL:rotation")
+properties/17/spawn = true
+properties/17/replication_mode = 1
+properties/18/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+properties/18/spawn = true
+properties/18/replication_mode = 1
+properties/19/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+properties/19/spawn = true
+properties/19/replication_mode = 1
+properties/20/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:position")
+properties/20/spawn = true
+properties/20/replication_mode = 1
+properties/21/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:rotation")
+properties/21/spawn = true
+properties/21/replication_mode = 1
+properties/22/path = NodePath("neck/head/WeaponManager/FPS_Rig/Bullet_Point:position")
+properties/22/spawn = true
+properties/22/replication_mode = 1
+properties/23/path = NodePath("neck/head/WeaponManager:_weapon_resources")
+properties/23/spawn = true
+properties/23/replication_mode = 1
+properties/24/path = NodePath("neck/head/WeaponManager:Start_Weapons")
+properties/24/spawn = true
+properties/24/replication_mode = 1
+
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_yrsvh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -974,7 +1053,6 @@ texture = ExtResource("3_3laho")
 expand_mode = 1
 
 [node name="Standing_Mesh" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("CapsuleMesh_6itpo")
 
 [node name="Crouched_Mesh" type="MeshInstance3D" parent="."]
@@ -1023,7 +1101,7 @@ visible = false
 transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1.3, -0.3, 0)
 
 [node name="RL" parent="neck/head/WeaponManager/FPS_Rig" instance=ExtResource("8_dsx5d")]
-transform = Transform3D(0.0315002, -0.00360925, -0.29832, 0.0341482, 0.29805, -1.96765e-07, 0.296381, -0.0339569, 0.0317063, 0.395113, -0.355924, -0.63674)
+transform = Transform3D(0.0315005, -0.00360928, -0.29832, 0.0341483, 0.29805, -1.96766e-07, 0.296381, -0.033957, 0.0317066, 0.395113, -0.355924, -0.63674)
 visible = false
 
 [node name="Bullet_Point" type="Marker3D" parent="neck/head/WeaponManager/FPS_Rig"]
@@ -1035,6 +1113,9 @@ libraries = {
 "": SubResource("AnimationLibrary_13sqd")
 }
 playback_default_blend_time = 0.05
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_wkqbc")
 
 [connection signal="Update_Ammo" from="neck/head/WeaponManager" to="CanvasLayer" method="_on_weapon_manager_update_ammo"]
 [connection signal="Update_Weapon_Stack" from="neck/head/WeaponManager" to="CanvasLayer" method="_on_weapon_manager_update_weapon_stack"]

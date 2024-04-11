@@ -22,8 +22,8 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func body_entered(body: Node3D):
-	var speed := 10.0
-	var air_speed := 30.0
+	var speed := 5.0
+	var air_speed := 15.0
 	var vector := body.global_transform.origin - global_transform.origin
 	var direction := vector.normalized()
 	var distance := vector.length_squared()
