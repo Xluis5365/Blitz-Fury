@@ -1,14 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhovwxeqiuaxs"]
 
-[ext_resource type="PackedScene" uid="uid://codm3wr1xvips" path="res://Models/Protypes/MachineGun.glb" id="1_qugy1"]
-[ext_resource type="Texture2D" uid="uid://bghhrf3oy5s73" path="res://Models/Protypes/MachineGun_0.png" id="2_bfklb"]
-[ext_resource type="Texture2D" uid="uid://bjkto8jromuth" path="res://Models/Protypes/MachineGun_1.png" id="3_a3sor"]
+[ext_resource type="PackedScene" uid="uid://codm3wr1xvips" path="res://Models/Protypes/MachineGun.glb" id="1_26vwm"]
+[ext_resource type="Texture2D" uid="uid://bghhrf3oy5s73" path="res://Models/Protypes/MachineGun_0.png" id="2_mgnwa"]
+[ext_resource type="Texture2D" uid="uid://bjkto8jromuth" path="res://Models/Protypes/MachineGun_1.png" id="3_ygpk4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4droq"]
 resource_name = "_defaultMat(Clone)"
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
-albedo_texture = ExtResource("2_bfklb")
+albedo_texture = ExtResource("2_mgnwa")
 metallic = 0.6
 roughness = 0.75
 uv1_scale = Vector3(0.1, 0.1, 1)
@@ -24,7 +24,7 @@ metallic = 0.35
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0g8m"]
 resource_name = "dark(Clone)"
 albedo_color = Color(0.0627586, 0.0685598, 0.0896552, 1)
-albedo_texture = ExtResource("3_a3sor")
+albedo_texture = ExtResource("3_ygpk4")
 metallic = 0.6
 roughness = 0.5
 uv1_scale = Vector3(0.1, 0.1, 1)
@@ -111,7 +111,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_db1bf")
 
-[node name="MachineGun" instance=ExtResource("1_qugy1")]
+[node name="MachineGun" instance=ExtResource("1_26vwm")]
 transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 0, 0)
 
 [node name="scope_small" parent="." index="9"]

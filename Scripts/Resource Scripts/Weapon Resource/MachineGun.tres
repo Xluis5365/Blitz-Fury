@@ -6,6 +6,7 @@
 script = ExtResource("1_m3iwk")
 Weapon_Name = "MachineGun"
 Activate_Anim = "MachineGun Activate"
+Deactivate_Anim = "MachineGun Deactivate"
 Shoot_Anim = "MachineGun Shoot"
 Reload_Anim = "MachineGun Reload"
 Out_of_Ammo = ""

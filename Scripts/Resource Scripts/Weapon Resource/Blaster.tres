@@ -6,6 +6,7 @@
 script = ExtResource("1_8uuvr")
 Weapon_Name = "Blaster"
 Activate_Anim = "Blaster Activate"
+Deactivate_Anim = "Blaster Deactivate"
 Shoot_Anim = "Blaster Shoot"
 Reload_Anim = "Blaster Reload"
 Out_of_Ammo = ""

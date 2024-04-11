@@ -74,6 +74,10 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		elif Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	
 	if event is InputEventMouseMotion:
 		if free_looking:
 			neck.rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
@@ -187,10 +191,10 @@ func _physics_process(delta: float) -> void:
 		sliding = false
 	
 	# Handle Idle animations
-	if input_dir == Vector2.ZERO and is_on_floor():
-		anim_player.play("blaster_withscope_idle")
-	else:
-		anim_player.play("RESET")
+	#if input_dir == Vector2.ZERO and is_on_floor():
+		#anim_player.play("blaster_withscope_idle")
+	#else:
+		#anim_player.play("RESET")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

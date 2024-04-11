@@ -4,3 +4,9 @@ res://Scenes/Player/player.tscn
 res://Models/Protypes/Model_scnenes/blasterwithscope.tscn
 res://Models/Protypes/Model_scnenes/machine_gun.tscn
 res://Scenes/Player/WeaponManager.gd
+res://Models/Protypes/Model_scnenes/Blaster.tscn
+res://Models/Protypes/Model_scnenes/MachineGun.tscn
+res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres
+res://Scripts/Player.gd
+res://Scripts/Resource Scripts/weapon_resource.gd
+res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres

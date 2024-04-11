@@ -4,6 +4,7 @@ class_name WeaponResource
 
 @export var Weapon_Name : String
 @export var Activate_Anim : String
+@export var Deactivate_Anim : String
 @export var Shoot_Anim : String
 @export var Reload_Anim : String
 @export var Out_of_Ammo : String
