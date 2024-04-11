@@ -1,16 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712708124
+::res://::1712795079
 icon.svg::CompressedTexture2D::3692892744339962346::1712594702::1712594716::1::::<><>::
 README.md::TextFile::-1::1712704123::0::1::::<><>::
 ::res://Assets/::1712602849
-::res://Assets/Materials/::1712707559
-Black_Texture.tres::StandardMaterial3D::2425992326671143656::1712707559::0::1::::<><>::uid://bt44d1fuhjb42::::res://Assets/Materials/texture_13.png
+::res://Assets/Materials/::1712791040
+Black_Texture.tres::StandardMaterial3D::2425992326671143656::1712791040::0::1::::<><>::uid://bt44d1fuhjb42::::res://Assets/Materials/texture_13.png
 p_texture_01.png::CompressedTexture2D::7876513722449761666::1712602986::1712602989::1::::<><>::
 texture_01.png::CompressedTexture2D::5307823130446781776::1712602956::1712602956::1::::<><>::
 texture_02.png::CompressedTexture2D::2425123948971461453::1712602887::1712602887::1::::<><>::
 texture_13.png::CompressedTexture2D::3781643192104936561::1712602912::1712611043::1::::<><>::
 ::res://Models/::1712708086
-::res://Models/Protypes/::1712712826
+::res://Models/Protypes/::1712713144
 BlasterWithScope.glb::PackedScene::172172177340129777::1712711013::1712711016::1::::<><>::uid://dqowuph0bip54::::res://Models/Protypes/BlasterWithScope_0.png<>uid://b822dfbjnmy48::::res://Models/Protypes/BlasterWithScope_1.png<>uid://cv76h2a1km4wq::::res://Models/Protypes/BlasterWithScope_2.png
 BlasterWithScope_0.png::CompressedTexture2D::8312557127365056133::1712711015::1712711016::1::::<><>::
 BlasterWithScope_1.png::CompressedTexture2D::4760035703882539627::1712711016::1712711016::1::::<><>::
@@ -18,13 +18,19 @@ BlasterWithScope_2.png::CompressedTexture2D::6314763318573533872::1712711016::17
 MachineGun.glb::PackedScene::5762458100711639624::1712713142::1712713144::1::::<><>::uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
 MachineGun_0.png::CompressedTexture2D::2822460073786105684::1712712776::1712712777::1::::<><>::
 MachineGun_1.png::CompressedTexture2D::3039944425918622461::1712712776::1712712777::1::::<><>::
-::res://Models/Protypes/Model_scnenes/::1712713114
+::res://Models/Protypes/Model_scnenes/::1712795057
+blasterwithscope.tscn::PackedScene::3805717600189388265::1712795057::0::1::::<><>::uid://cpnwedonamsn::::res://Models/Protypes/BlasterWithScope.glb
 blaster_with_scope.tscn::PackedScene::800919842214334646::1712710071::0::1::::<><>::uid://bx7gae8rg1nse::::res://Models/Protypes/Blaster_WithScope.glb
-blasterwithscope.tscn::PackedScene::3805717600189388265::1712711546::0::1::::<><>::uid://cpnwedonamsn::::res://Models/Protypes/BlasterWithScope.glb
-machine_gun.tscn::PackedScene::7680800804371085504::1712713114::0::1::::<><>::uid://codm3wr1xvips::::res://Models/Protypes/MachineGun.glb<>uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
-::res://Scenes/::1712711546
+machine_gun.tscn::PackedScene::7680800804371085504::1712795057::0::1::::<><>::uid://codm3wr1xvips::::res://Models/Protypes/MachineGun.glb<>uid://bghhrf3oy5s73::::res://Models/Protypes/MachineGun_0.png<>uid://bjkto8jromuth::::res://Models/Protypes/MachineGun_1.png
+::res://Scenes/::1712795057
+test_main.tscn::PackedScene::4275006140612227329::1712795057::0::1::::<><>::uid://batf0eqwwfe5u::::res://Assets/Materials/Black_Texture.tres<>uid://dysr4vh5uqf4k::::res://Scenes/Player/player.tscn
+::res://Scenes/Player/::1712795057
+player.tscn::PackedScene::8882038190059837240::1712795057::0::1::::<><>::res://Scripts/Player.gd<>res://Scenes/Player/WeaponManager.gd<>uid://dhovwxeqiuaxs::::res://Models/Protypes/Model_scnenes/machine_gun.tscn<>uid://ch4v1chbmeqd2::::res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres<>uid://buhru3ptjxqnh::::res://Models/Protypes/Model_scnenes/blasterwithscope.tscn<>uid://3shs4uulqwrq::::res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres
+WeaponManager.gd::GDScript::-1::1712794953::0::1::::<>Node3D<>::
+::res://Scripts/::1712791538
 Player.gd::GDScript::-1::1712710711::0::1::::<>CharacterBody3D<>::
-test_main.tscn::PackedScene::4275006140612227329::1712711546::0::1::::<><>::uid://batf0eqwwfe5u::::res://Assets/Materials/Black_Texture.tres<>uid://dysr4vh5uqf4k::::res://Scenes/Player/player.tscn
-::res://Scenes/Player/::1712711575
-player.tscn::PackedScene::8882038190059837240::1712711575::0::1::::<><>::res://Scenes/Player.gd<>uid://buhru3ptjxqnh::::res://Models/Protypes/Model_scnenes/blasterwithscope.tscn
-::res://Scripts/::1712611371
+::res://Scripts/Resource Scripts/::1712792529
+weapon_resource.gd::GDScript::-1::1712792529::0::1::::WeaponResource<>Resource<>::
+::res://Scripts/Resource Scripts/Weapon Resource/::1712795050
+Blaster.tres::Resource/WeaponResource::2002905139674941658::1712794603::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd
+MachineGun.tres::Resource/WeaponResource::5325351831131763841::1712795050::0::1::::<><>::res://Scripts/Resource Scripts/weapon_resource.gd

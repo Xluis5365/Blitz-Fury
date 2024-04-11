@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dysr4vh5uqf4k"]
+[gd_scene load_steps=20 format=3 uid="uid://dysr4vh5uqf4k"]
 
-[ext_resource type="Script" path="res://Scenes/Player.gd" id="1_4pe3u"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_yrsvh"]
+[ext_resource type="Script" path="res://Scenes/Player/WeaponManager.gd" id="2_c782q"]
 [ext_resource type="PackedScene" uid="uid://dhovwxeqiuaxs" path="res://Models/Protypes/Model_scnenes/machine_gun.tscn" id="3_1dhmr"]
+[ext_resource type="Resource" uid="uid://ch4v1chbmeqd2" path="res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres" id="3_3rpk0"]
 [ext_resource type="PackedScene" uid="uid://buhru3ptjxqnh" path="res://Models/Protypes/Model_scnenes/blasterwithscope.tscn" id="3_851iq"]
+[ext_resource type="Resource" uid="uid://3shs4uulqwrq" path="res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres" id="4_5fwuu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6itpo"]
 
@@ -13,139 +16,6 @@ height = 1.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oote2"]
 height = 1.3
-
-[sub_resource type="Animation" id="Animation_utjk1"]
-resource_name = "blaster_withscope_idle"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.568254)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(6.20038e-09, -1.5708, 0.144339)]
-}
-
-[sub_resource type="Animation" id="Animation_xcd2n"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -1.5708, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.271367, -0.517, -0.342622)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_re2f0"]
-resource_name = "blaster_withscope_shoot"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector3(-5.27407e-09, -1.5708, -0.120951), Vector3(0, -1.5708, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
-}
 
 [sub_resource type="Animation" id="Animation_nd6lp"]
 resource_name = "Blaster Activate"
@@ -186,33 +56,32 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="Animation" id="Animation_vsohm"]
-resource_name = "MachineGun Shoot"
-length = 0.2
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_dsysr"]
+resource_name = "Blaster Reload"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.8, 1, 1.5),
+"transitions": PackedFloat32Array(0.5, 0.5, 1, 2, 2),
 "update": 0,
-"values": [Vector3(5.02852e-09, -1.5708, -0.0666541), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -1.5708, 0), Vector3(-0.335353, -1.72743, 0.646368), Vector3(-0.331494, -1.73568, 0.671547), Vector3(-0.335353, -1.72743, 0.646368), Vector3(0, -1.5708, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.8, 1, 1.5),
+"transitions": PackedFloat32Array(0.5, 0.5, 1, 2, 2),
 "update": 0,
-"values": [Vector3(0.271367, -0.517, -0.279086), Vector3(0.271367, -0.517, -0.342622)]
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.113181, -0.715036, -0.512637), Vector3(0.112736, -0.715036, -0.479788), Vector3(0.113181, -0.715036, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
 }
 
 [sub_resource type="Animation" id="Animation_sm5eb"]
@@ -255,10 +124,250 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_imcgh"]
+resource_name = "MachineGun Reload"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0.271367, -0.517, -0.342622), Vector3(0.271367, -0.517, -0.298175), Vector3(0.271367, -0.517, -0.298175), Vector3(0.271367, -0.517, -0.342622)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(-0.265116, -1.5708, 0.331386), Vector3(-0.265116, -1.5708, 0.331386), Vector3(0, -1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1, 1.2, 1.4, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.3, -0.3, 0), Vector3(-1.3, -0.3, 0), Vector3(-1.38938, -0.559772, 0.158785), Vector3(-1.04692, -1.33641, 0.637406), Vector3(-1.62446, -0.725224, 1.01671), Vector3(-1.42121, -0.479678, 0.231185), Vector3(-1.3, -0.3, 0), Vector3(-1.3, -0.3, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1, 1.2, 1.4, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0.00413891, 1.62401, -0.15521), Vector3(0.0173009, 1.67859, -0.318005), Vector3(0.00413894, 1.62401, -0.15521), Vector3(0.00748136, 1.63759, -0.195771), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vsohm"]
+resource_name = "MachineGun Shoot"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(5.02852e-09, -1.5708, -0.0666541), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.271367, -0.517, -0.279086), Vector3(0.271367, -0.517, -0.342622)]
+}
+
+[sub_resource type="Animation" id="Animation_xcd2n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.271367, -0.517, -0.342622)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.3, -0.3, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("neck/head/WeaponManager/FPS_Rig/MachineGun/clipBarrel:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_utjk1"]
+resource_name = "blaster_withscope_idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.568254)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(6.20038e-09, -1.5708, 0.144339)]
+}
+
+[sub_resource type="Animation" id="Animation_re2f0"]
+resource_name = "blaster_withscope_shoot"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(-5.27407e-09, -1.5708, -0.120951), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("neck/head/WeaponManager/FPS_Rig/BlasterWithScope:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0.278251, -0.517, -0.512637), Vector3(0.278251, -0.517, -0.512637)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_13sqd"]
 _data = {
 "Blaster Activate": SubResource("Animation_nd6lp"),
+"Blaster Reload": SubResource("Animation_dsysr"),
 "MachineGun Activate": SubResource("Animation_sm5eb"),
+"MachineGun Reload": SubResource("Animation_imcgh"),
 "MachineGun Shoot": SubResource("Animation_vsohm"),
 "RESET": SubResource("Animation_xcd2n"),
 "blaster_withscope_idle": SubResource("Animation_utjk1"),
@@ -267,7 +376,7 @@ _data = {
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("1_4pe3u")
+script = ExtResource("1_yrsvh")
 
 [node name="Standing_Mesh" type="MeshInstance3D" parent="."]
 visible = false
@@ -301,17 +410,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.517, 0)
 fov = 80.0
 
 [node name="WeaponManager" type="Node3D" parent="neck/head"]
+script = ExtResource("2_c782q")
+_weapon_resources = Array[Resource("res://Scripts/Resource Scripts/weapon_resource.gd")]([ExtResource("3_3rpk0"), ExtResource("4_5fwuu")])
+Start_Weapon = Array[String](["Blaster"])
 
 [node name="FPS_Rig" type="Node3D" parent="neck/head/WeaponManager"]
 
 [node name="BlasterWithScope" parent="neck/head/WeaponManager/FPS_Rig" instance=ExtResource("3_851iq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.278251, -0.517, -0.512637)
+transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0.278251, -0.517, -0.512637)
+visible = false
 
 [node name="MachineGun" parent="neck/head/WeaponManager/FPS_Rig" instance=ExtResource("3_1dhmr")]
-transform = Transform3D(2.26494e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, 2.26494e-08, 0.271367, -0.517, -0.342622)
+transform = Transform3D(-1.086e-06, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.086e-06, 0.271367, -0.517, -0.342622)
+visible = false
+
+[node name="clipBarrel" parent="neck/head/WeaponManager/FPS_Rig/MachineGun" index="2"]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1.3, -0.3, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_13sqd")
 }
 playback_default_blend_time = 0.05
+
+[editable path="neck/head/WeaponManager/FPS_Rig/MachineGun"]
