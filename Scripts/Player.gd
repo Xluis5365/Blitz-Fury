@@ -64,6 +64,14 @@ var mouse_sens = 0.12
 var direction = Vector3.ZERO
 
 
+#Movement Acceleration
+
+const GROUND_ACCEL = 45
+const AIR_ACCEL = 56
+const FRICTION = 7
+const MAX_SPEED = 13.0
+const MAX_SPEED_AIR = 30.5
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -181,9 +189,6 @@ func _physics_process(delta: float) -> void:
 		eyes.position.x = lerp(eyes.position.x, 0.0, delta*lerp_speed)
 	
 	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -212,5 +217,29 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
-
+	
+	if is_on_floor() && !sliding:
+		velocity = accelerate(direction, delta, GROUND_ACCEL, MAX_SPEED)
+		#apply friction
+		var speed = velocity.length()
+		if speed != 0:
+			var drop = speed * FRICTION * delta
+			velocity *= max(speed - drop, 0) / speed
+	
+	else:
+		velocity = accelerate(direction, delta, AIR_ACCEL, MAX_SPEED_AIR)
+		velocity.y -= gravity * delta #adds the gravity
+		
+		
 	move_and_slide()
+
+func accelerate(dir, delta, accel_type, max_velocity):
+	var proj_vel = velocity.dot(dir)
+	$CanvasLayer/VBoxContainer/HBoxContainer4/Proj_vel.text = str(proj_vel)
+	$CanvasLayer/VBoxContainer/HBoxContainer5/Actual_vel.text = str(velocity.length())
+	var accel_vel = accel_type * delta
+	
+	if (proj_vel + accel_vel > max_velocity):
+		accel_vel = max_velocity - proj_vel
+	
+	return velocity + (dir * accel_vel)

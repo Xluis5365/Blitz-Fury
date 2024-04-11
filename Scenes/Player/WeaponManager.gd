@@ -167,6 +167,7 @@ func Launch_Projectile(Point: Vector3):
 		world.add_child(Explosion)
 		Explosion.global_translate(Bullet_Collision.position)
 		Hit_Scan_Damage(Bullet_Collision.collider)
+		Projectile.queue_free()
 	
 	bullet_point.add_child(Projectile)
 	Projectile.Damage = Current_Weapon.Damage

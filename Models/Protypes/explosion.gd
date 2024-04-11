@@ -22,11 +22,16 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func body_entered(body: Node3D):
-	var speed := 15.0
+	var speed := 10.0
+	var air_speed := 30.0
 	var vector := body.global_transform.origin - global_transform.origin
 	var direction := vector.normalized()
 	var distance := vector.length_squared()
 	
 	var velocity := direction * speed/distance
+	var air_velocity := direction * air_speed/distance
 	if body is CharacterBody3D:
-		body.velocity += velocity
+		if body.is_on_floor():
+			body.velocity += velocity
+		if body.is_on_floor() == false:
+			body.velocity += air_velocity

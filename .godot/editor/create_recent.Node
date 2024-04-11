@@ -1,3 +1,4 @@
+CSGBox3D
 CollisionShape3D
 Area3D
 GPUParticles3D
@@ -11,4 +12,3 @@ TextureRect
 HBoxContainer
 Label
 VBoxContainer
-CanvasLayer

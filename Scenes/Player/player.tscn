@@ -935,6 +935,28 @@ layout_mode = 2
 text = "
 "
 
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Proj vel:"
+
+[node name="Proj_vel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "
+"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Actual vel:"
+
+[node name="Actual_vel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(30, 30)
 anchors_preset = 8
