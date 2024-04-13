@@ -1,14 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b153yx5kqj7ld"]
+[gd_scene load_steps=5 format=3 uid="uid://b153yx5kqj7ld"]
 
 [ext_resource type="Script" path="res://SceneManager.gd" id="1_gjlj0"]
-[ext_resource type="Material" uid="uid://batf0eqwwfe5u" path="res://Assets/Materials/Black_Texture.tres" id="1_qabi7"]
-[ext_resource type="Material" uid="uid://6dc5cm2plylc" path="res://Assets/Materials/Red_Texture.tres" id="2_kimv6"]
-[ext_resource type="Texture2D" uid="uid://chvfcovjxafoq" path="res://Assets/Materials/texture_01.png" id="3_052np"]
-[ext_resource type="Script" path="res://Scripts/Box.gd" id="3_q46bd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibdsw"]
-albedo_texture = ExtResource("3_052np")
-uv1_triplanar = true
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_16a2k"]
 sky_top_color = Color(0.396078, 0.47451, 0.823529, 1)
@@ -25,81 +17,8 @@ sky = SubResource("Sky_fxn68")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_4gccx"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uypml"]
-points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
-
 [node name="World" type="Node3D"]
 script = ExtResource("1_gjlj0")
-
-[node name="Stage" type="Node3D" parent="."]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80416, -0.5, 2.68233)
-use_collision = true
-size = Vector3(65.7046, 1, 68.7737)
-material = ExtResource("1_qabi7")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85495, -12)
-use_collision = true
-size = Vector3(20, 1, 20)
-material = ExtResource("1_qabi7")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(0.824156, 0, 0.566363, 0, 1, 0, -0.566363, 0, 0.824156, -6.81109, 2.97534, 24.4465)
-use_collision = true
-size = Vector3(1, 5.89404, 14.4971)
-material = ExtResource("2_kimv6")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(0.999834, 0, 0.0182203, 0, 1, 0, -0.0182203, 0, 0.999834, 21.7987, 2.97534, 10.7505)
-use_collision = true
-size = Vector3(1, 5.89404, 14.4971)
-material = ExtResource("2_kimv6")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(0.999834, 0, 0.0182203, 0, 1, 0, -0.0182203, 0, 0.999834, 9.78175, 2.97534, -9.53046)
-use_collision = true
-size = Vector3(1, 5.89404, 14.4971)
-material = ExtResource("2_kimv6")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(0.999834, 0, 0.0182203, 0, 1, 0, -0.0182203, 0, 0.999834, 19.753, 8.13659, -4.69143)
-use_collision = true
-size = Vector3(1, 16.2166, 8.47559)
-material = ExtResource("2_kimv6")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(0.991502, 0, 0.130094, 0, 1, 0, -0.130094, 0, 0.991502, -11.7687, 2.97534, 11.4964)
-use_collision = true
-size = Vector3(1, 5.89404, 14.4971)
-material = ExtResource("2_kimv6")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -2.78064, 2.51544, 40.254)
-use_collision = true
-size = Vector3(66, 8.8894, 1)
-material = SubResource("StandardMaterial3D_ibdsw")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -2.78064, 2.51544, -35.0992)
-use_collision = true
-size = Vector3(66, 8.8894, 1)
-material = SubResource("StandardMaterial3D_ibdsw")
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(-4.37114e-08, -0.707107, -0.707107, 0, 0.707107, -0.707107, 1, -3.09086e-08, -3.09086e-08, -33.7084, 2.51544, 3.05549)
-use_collision = true
-size = Vector3(85.507, 8.8894, 1)
-material = SubResource("StandardMaterial3D_ibdsw")
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(-1.77636e-15, 0.707107, -0.707107, 4.37114e-08, 0.707107, 0.707107, 1, -3.09086e-08, -3.09086e-08, 28.7006, 2.51544, 3.05549)
-use_collision = true
-size = Vector3(85.507, 8.8894, 1)
-material = SubResource("StandardMaterial3D_ibdsw")
 
 [node name="env" type="Node3D" parent="."]
 
@@ -109,18 +28,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
 environment = SubResource("Environment_fhnor")
-
-[node name="Box" type="RigidBody3D" parent="." groups=["Target"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66491, 4.13105)
-collision_layer = 4
-collision_mask = 7
-script = ExtResource("3_q46bd")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Box"]
-mesh = SubResource("BoxMesh_4gccx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Box"]
-shape = SubResource("ConvexPolygonShape3D_uypml")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://Scenes/Player/player.tscn")
@@ -170,5 +77,35 @@ layout_mode = 2
 placeholder_text = "Enter Address to Join Here"
 alignment = 1
 
+[node name="Label2" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Number of Player
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 5
+selected = 0
+popup/item_0/text = "2"
+popup/item_0/id = 2
+popup/item_1/text = "4"
+popup/item_1/id = 4
+popup/item_2/text = "6"
+popup/item_2/id = 6
+popup/item_3/text = "8"
+popup/item_3/id = 8
+popup/item_4/text = "10"
+popup/item_4/id = 10
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.29926, -0.5, -24.5953)
+use_collision = true
+size = Vector3(46.4735, 1, 73.6552)
+
 [connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="item_selected" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

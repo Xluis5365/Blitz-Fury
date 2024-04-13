@@ -1,3 +1,5 @@
+CSGBox3D
+Node3D
 MultiplayerSynchronizer
 LineEdit
 Button
@@ -7,8 +9,6 @@ PanelContainer
 MarginContainer
 CanvasLayer
 MultiplayerSpawner
-Node3D
-CSGBox3D
 CollisionShape3D
 Area3D
 GPUParticles3D
