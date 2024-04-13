@@ -1117,12 +1117,6 @@ playback_default_blend_time = 0.05
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_wkqbc")
 
-[node name="PlayerName" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25047, 0)
-billboard = 2
-text = "Name
-"
-
 [connection signal="Update_Ammo" from="neck/head/WeaponManager" to="CanvasLayer" method="_on_weapon_manager_update_ammo"]
 [connection signal="Update_Weapon_Stack" from="neck/head/WeaponManager" to="CanvasLayer" method="_on_weapon_manager_update_weapon_stack"]
 [connection signal="Weapon_Changed" from="neck/head/WeaponManager" to="CanvasLayer" method="_on_weapon_manager_weapon_changed"]
