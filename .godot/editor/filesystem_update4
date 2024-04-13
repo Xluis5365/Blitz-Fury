@@ -5,3 +5,4 @@ res://Models/Protypes/Model_scnenes/Blaster.tscn
 res://Models/Protypes/Model_scnenes/MachineGun.tscn
 res://Models/Protypes/explosion.tscn
 res://SceneManager.gd
+res://Scripts/Player.gd

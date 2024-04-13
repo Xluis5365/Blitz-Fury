@@ -14,13 +14,15 @@ var enet_peer = ENetMultiplayerPeer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace wiEh function body.
+	multiplayer.connected_to_server.connect(connected_to_server)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
+func _on_option_button_item_selected(index: int) -> void:
+	NumberofPlayers = int($CanvasLayer/MainMenu/MarginContainer/VBoxContainer/OptionButton.get_item_text(index))
 
 func _on_host_button_pressed() -> void:
 	main_menu.hide()
@@ -30,14 +32,19 @@ func _on_host_button_pressed() -> void:
 	multiplayer.peer_connected.connect(add_player)
 	multiplayer.peer_disconnected.connect(remove_player)
 	
+	
+	
 	add_player(multiplayer.get_unique_id())
 	upnp_setup()
 	StartGame.rpc()
+	SendPlayerInformation($CanvasLayer/MainMenu/MarginContainer/VBoxContainer/NameEntry.text, multiplayer.get_unique_id())
 
 func decodes_for_address():
 	secret_key = address_entry.text
 
-
+func connected_to_server():
+	print("Connected to server")
+	SendPlayerInformation.rpc_id(1, $CanvasLayer/MainMenu/MarginContainer/VBoxContainer/NameEntry.text, multiplayer.get_unique_id())
 
 
 func _on_join_button_pressed() -> void:
@@ -54,6 +61,20 @@ func add_player(peer_id):
 	var player = Player.instantiate()
 	player.name = str(peer_id)
 	add_child(player)
+
+@rpc("any_peer")
+func SendPlayerInformation(name, id):
+	if !GameManager.Players.has(id):
+		GameManager.Players[id]= {
+			"name" : $CanvasLayer/MainMenu/MarginContainer/VBoxContainer/NameEntry.text,
+			"id" : id,
+			"score" : 0
+		}
+	if multiplayer.is_server():
+		for i in GameManager.Players:
+			SendPlayerInformation.rpc(GameManager.Players[i].name, i)
+	
+	 
 
 func remove_player(peer_id):
 	var player = get_node_or_null(str(peer_id))
@@ -107,5 +128,3 @@ func decode(code: String) -> String:
 	return decoded_address
 
 
-func _on_option_button_item_selected(index: int) -> void:
-	NumberofPlayers = $CanvasLayer/MainMenu/MarginContainer/VBoxContainer/OptionButton.get_item_text(index)

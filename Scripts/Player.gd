@@ -76,7 +76,10 @@ const MAX_SPEED_AIR = 30.5
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _enter_tree() -> void:
+	str(name).to_upper()
+	$Name.text = str(name)
 	set_multiplayer_authority(str(name).to_int())
+	
 
 func _ready() -> void:
 	if not is_multiplayer_authority(): return

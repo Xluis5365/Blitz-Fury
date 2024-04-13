@@ -77,6 +77,11 @@ layout_mode = 2
 placeholder_text = "Enter Address to Join Here"
 alignment = 1
 
+[node name="NameEntry" type="LineEdit" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Your Name"
+alignment = 1
+
 [node name="Label2" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Number of Player
@@ -87,7 +92,7 @@ vertical_alignment = 1
 [node name="OptionButton" type="OptionButton" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 5
-selected = 0
+selected = 2
 popup/item_0/text = "2"
 popup/item_0/id = 2
 popup/item_1/text = "4"
