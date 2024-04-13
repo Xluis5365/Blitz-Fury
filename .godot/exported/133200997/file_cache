@@ -1,0 +1,15 @@
+res://Assets/Materials/Black_Texture.tres::8845e1c1157697c2d192e121f3ebc414::1712968195::res://.godot/exported/133200997/export-bf0e5e8bc03daaf92d88281cd2388e1d-Black_Texture.res
+res://Assets/Materials/FlareMattres.tres::e18e2d633494e37ab9f280f0df77eb9a::1712811495::res://.godot/exported/133200997/export-c3fc52c8a96bb25b5439f384ec5610d2-FlareMattres.res
+res://Assets/Materials/Red_Texture.tres::35eee4c56b1868a0e5100d3740ab4506::1712968195::res://.godot/exported/133200997/export-0595c5cacd5098d163ac237fe5af6134-Red_Texture.res
+res://Models/Protypes/Model_scnenes/Blaster.tscn::5083601359856ce28a2e960f3326e0b9::1712972261::res://.godot/exported/133200997/export-a00a90f1c10b345ea85b17f215a60c51-Blaster.scn
+res://Models/Protypes/Model_scnenes/MachineGun.tscn::231586bf059517769e1fb2a75097ab73::1712972261::res://.godot/exported/133200997/export-e807125361d04c0e74570c23c18a07ad-MachineGun.scn
+res://Models/Protypes/Model_scnenes/rl.tscn::05ad258d08878971732b2eaa4696c439::1712809695::res://.godot/exported/133200997/export-f44ae219b7db3aea16bedffee973731d-rl.scn
+res://Models/Protypes/Model_scnenes/Rocket_Model.tscn::c14c76af1d0a1821173ed7d149531e4b::1712846525::res://.godot/exported/133200997/export-e63a5384902a3e7bf9668dd69b4df93e-Rocket_Model.scn
+res://Models/Protypes/explosion.tscn::9eae9b4199065185da454d333b90e55f::1712972261::res://.godot/exported/133200997/export-213883dd9a012d0b937bdc19d8bebd6f-explosion.scn
+res://Multiplayer/MultiplayerScene.tscn::e108b10bd2b829768531b81950ec4be2::1712852825::res://.godot/exported/133200997/export-3cde21acf36721a8c494baf16649d05e-MultiplayerScene.scn
+res://Scenes/Player/player.tscn::f69d60a0961b8a5f5f78346b97015578::1712972261::res://.godot/exported/133200997/export-8e63b53a88b650cb9792f8d8b6d332bc-player.scn
+res://Scenes/test_main.tscn::09b7ab60b6a323308a07c0256cba170d::1712972651::res://.godot/exported/133200997/export-3820a5f953828d288398680db35f2e8f-test_main.scn
+res://Scripts/Resource Scripts/Weapon Resource/Blaster.tres::e54b93b92d270be758c457caa9bcb4af::1712806543::res://.godot/exported/133200997/export-05e95b1f648f693e0b053ff9168fa7af-Blaster.res
+res://Scripts/Resource Scripts/Weapon Resource/bullet_debug.tscn::8fcc73a63379cade37161bd88ea84c86::1712846523::res://.godot/exported/133200997/export-490e42d16b7cc11b11895011cba7d1a2-bullet_debug.scn
+res://Scripts/Resource Scripts/Weapon Resource/MachineGun.tres::40ffe3ffb418b4da0e857af02f71e239::1712806515::res://.godot/exported/133200997/export-ce7286b3a18fa3f422b33ba319d11a7e-MachineGun.res
+res://Scripts/Resource Scripts/Weapon Resource/RL.tres::ab38574f02d9c955f4ba6fa8030bcbb5::1712968195::res://.godot/exported/133200997/export-5226db0290684ef7439a1c879b71614c-RL.res

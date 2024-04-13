@@ -27,9 +27,13 @@ var Weapon_List = {}
 
 enum {NULL, HITSCAN, PROJECTILE}
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(str(name).to_int())
+
 func _ready() -> void:
 	initialize(Start_Weapons) #enter the state machine
 
+@rpc("authority", "call_remote")
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Weapon_Up"):
 		Weapon_Indicator = min(Weapon_Indicator+1, Weapon_Stack.size()-1)
@@ -46,7 +50,7 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Shoot"):
-		shoot.rpc()
+		shoot()
 
 func initialize(_start_weapon : Array):
 	#Creating a dictionary to refer to our weapons
@@ -82,7 +86,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == Current_Weapon.Deactivate_Anim:
 		Change_Weapon(Next_Weapon)
 
-@rpc("call_local")
 func shoot():
 	if Current_Weapon.Current_Ammo != 0:
 		if !animation_player.is_playing(): # enforces the DPS by the animation lenght

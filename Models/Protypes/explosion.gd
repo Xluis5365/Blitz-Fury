@@ -9,14 +9,20 @@ extends Node3D
 func _enter_tree() -> void:
 	pass
 # Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
+	explosion()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+@rpc("authority", "call_remote")
+func explosion():
 	spark.emitting = true
 	flash.emitting = true
 	fire.emitting = true
 	smoke.emitting = true
 	area_3d.connect("body_entered", body_entered)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if smoke.emitting == false:
 		queue_free()

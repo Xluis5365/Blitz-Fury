@@ -1,14 +1,11 @@
-res://Multiplayer/MultiplayerScene.tscn
-res://Assets/Materials/Black_Texture.tres
-res://Scripts/Resource Scripts/Weapon Resource/RL.tres
-res://Assets/Materials/Red_Texture.tres
-res://GameManager.gd
-res://MultiplayerController.gd
 res://Scenes/test_main.tscn
-res://SceneManager.gd
+res://Scripts/Resource Scripts/Weapon Resource/RL.tres
+res://Assets/Materials/Black_Texture.tres
+res://Assets/Materials/Red_Texture.tres
 res://Scenes/Player/player.tscn
 res://Models/Protypes/Model_scnenes/Blaster.tscn
 res://Models/Protypes/Model_scnenes/MachineGun.tscn
 res://Models/Protypes/explosion.tscn
-res://Scripts/Player.gd
+res://Scenes/main_menu.tscn
 res://Scenes/Player/WeaponManager.gd
+res://SceneManager.gd
